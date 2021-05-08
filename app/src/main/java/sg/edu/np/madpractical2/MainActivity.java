@@ -18,11 +18,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        String nameId = getIntent().getStringExtra("RANDOM_INT");
         User myObj = new User();
         myObj.setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua");
         myObj.setFollowed(false);
         myObj.setId(1);
-        myObj.setName("Hello World!");
+        myObj.setName("MAD " + nameId);
 
         final TextView nameTextView = (TextView) findViewById(R.id.textView);
         nameTextView.setText(myObj.getName());
